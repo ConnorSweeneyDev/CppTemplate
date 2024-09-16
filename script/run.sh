@@ -1,3 +1,3 @@
 #!/bin/bash
 
-./binary/linux/Name.out
+./binary/linux/CppTemplate.out

@@ -1,3 +1,3 @@
 #!/bin/bash
 
-gdb binary/linux/Name.out
+gdb binary/linux/CppTemplate.out
