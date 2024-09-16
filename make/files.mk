@@ -1,11 +1,11 @@
 ifeq ($(UNAME), Windows)
   ECHO := echo -e
-  TARGET_DIRECTORY := binary/windows
-  OUTPUT_FILE := $(TARGET_DIRECTORY)/CppTemplate.exe
+  TARGET_PLATFORM_DIRECTORY := binary/windows
+  OUTPUT_FILE := $(TARGET_PLATFORM_DIRECTORY)/CppTemplate.exe
 else ifeq ($(UNAME), Linux)
   ECHO := echo
-  TARGET_DIRECTORY := binary/linux
-  OUTPUT_FILE := $(TARGET_DIRECTORY)/CppTemplate.out
+  TARGET_PLATFORM_DIRECTORY := binary/linux
+  OUTPUT_FILE := $(TARGET_PLATFORM_DIRECTORY)/CppTemplate.out
 endif
 
 PROGRAM_SOURCE_DIRECTORY := program/source
