@@ -7,8 +7,7 @@ Version information for dependencies can be found in `external/version_info.txt`
 
 On Windows, the binary will be statically linked to any C++ runtime libraries that are used, but
 dynamically linked to third party libraries. On Linux, the binary will be statically linked where
-possible (libgcc and libstdc++) but dynamically linked to everything else. When ready to release,
-all libraries will be dynamically linked on both platforms and the necessary files will be included.
+possible (libgcc and libstdc++) but dynamically linked to everything else.
 
 After following the platform specific instructions below you can execute the `build.bat` file on
 Windows or the `build.sh` file on Linux from the root of the project to build the binary. The
