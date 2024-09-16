@@ -25,5 +25,5 @@ compile_commands.json
 *.smod
 
 # Executables
-Name.exe
-Name.out
+CppTemplate.exe
+CppTemplate.out
