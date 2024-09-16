@@ -5,7 +5,7 @@ ifeq ($(UNAME), Windows)
 else ifeq ($(UNAME), Linux)
   ECHO := echo
   TARGET_DIRECTORY := binary/linux
-  OUTPUT_FILE := $(TARGET_DIRECTORY)/CppTemplate.exe
+  OUTPUT_FILE := $(TARGET_DIRECTORY)/CppTemplate.out
 endif
 
 PROGRAM_SOURCE_DIRECTORY := program/source
