@@ -1,3 +1,3 @@
 @ECHO OFF
 
-start pwsh -Command "./binary/windows/Name.exe"
+start pwsh -Command "./binary/windows/CppTemplate.exe"
