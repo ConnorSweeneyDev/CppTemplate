@@ -1,3 +1,3 @@
 @ECHO OFF
 
-start pwsh -NoExit -Command "./binary/windows/CppTemplate.exe"
+START pwsh -NoExit -Command "./binary/windows/CppTemplate.exe"
