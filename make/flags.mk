@@ -9,7 +9,7 @@ WARNINGS := -Wall -Wextra -Wpedantic -Wconversion -Wshadow -Wundef -Wclobbered -
 INCLUDES := -Iprogram/include
 SYSTEM_INCLUDES := -isystemexternal/include
 ifeq ($(UNAME), Windows)
-  LIBRARIES := -static -lstdc++
+  LIBRARIES := -static -lgcc -lstdc++
 else ifeq ($(UNAME), Linux)
-  LIBRARIES := -static
+  LIBRARIES := -static -ldl -lm -lc -lgcc -lstdc++ -Wl,-rpath,'$$ORIGIN'
 endif
