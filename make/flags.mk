@@ -9,8 +9,8 @@ WARNINGS := -Wall -Wextra -Wpedantic -Wconversion -Wshadow -Wundef -Wclobbered -
 INCLUDES := -Iprogram/include
 ifeq ($(UNAME), Windows)
   SYSTEM_INCLUDES := -isystemexternal/include
-  LIBRARIES := -static -Wl,-Bstatic -lgcc -lstdc++ -lssp -lwinpthread
+  LIBRARIES := -static
 else ifeq ($(UNAME), Linux)
   SYSTEM_INCLUDES := -isystemexternal/include
-  LIBRARIES := -static-libgcc -static-libstdc++ -ldl -lpthread -Wl,-rpath,'$$ORIGIN'
+  LIBRARIES := -static
 endif
