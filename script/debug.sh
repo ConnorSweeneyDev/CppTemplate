@@ -1,3 +1,3 @@
 #!/bin/bash
 
-gdb binary/linux/CppTemplate.out
+gdb -tui ./binary/linux/CppTemplate.out
