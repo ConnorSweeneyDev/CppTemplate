@@ -5,6 +5,8 @@
 int main()
 {
   say_hello();
+  std::cin.get();
+
   return 0;
 }
 
