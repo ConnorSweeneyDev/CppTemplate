@@ -8,4 +8,6 @@ if [ "$OS" == "Windows_NT" ]; then
   make $CLEAN
 elif [ "$(uname)" == "Linux" ]; then
   make $CLEAN
+else
+  echo "Unsupported OS"
 fi

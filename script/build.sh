@@ -12,4 +12,6 @@ if [ "$OS" == "Windows_NT" ]; then
   make $UTILITY && make $PREPARE && make $BUILD
 elif [ "$(uname)" == "Linux" ]; then
   make $PREPARE && make $BUILD
+else
+  echo "Unsupported OS"
 fi
