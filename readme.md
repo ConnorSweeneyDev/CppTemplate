@@ -15,7 +15,6 @@ Do the following to ensure your environment is set up correctly:
 - Ensure that you have `[PATH_TO_GIT_INSTALLATION]/bin` in your path.
 - Download a 64-bit [MinGW](https://winlibs.com/) distribution with Clang/LLVM support and put the `[DISTRIBUTION]/bin`
   directory in your path.
-- Run `winget install --id Microsoft.Powershell --source winget` if you don't have pwsh.exe installed.
 - Run `winget install make --source winget` if you don't have Make installed.
 
 ### Linux
