@@ -3,5 +3,9 @@
 FLAGS="-f make/main.mk"
 CLEAN="clean $FLAGS"
 
-COMMAND="make $CLEAN"
-pwsh -Command $COMMAND
+if [[ "$OSTYPE" == "linux-gnu"* ]]; then
+  make $CLEAN
+elif [[ "$OSTYPE" == "msys" ]]; then
+  COMMAND="make $CLEAN"
+  pwsh -Command $COMMAND
+fi
