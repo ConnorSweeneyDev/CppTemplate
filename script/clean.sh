@@ -1,6 +1,7 @@
 #!/bin/bash
 
-FLAGS="-f make/main.mk"
+FLAGS="-s -f make/main.mk"
+
 CLEAN="clean $FLAGS"
 
 if [[ "$OSTYPE" == "linux-gnu"* ]]; then

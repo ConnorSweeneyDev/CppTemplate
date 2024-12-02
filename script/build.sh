@@ -1,9 +1,9 @@
 #!/bin/bash
 
+PROCESSOR_COUNT=$(nproc)
 DEBUG=1
-CWD=$(pwd)
-CPU_COUNT_MULTIPLIER=$(nproc)
-FLAGS="-s -f make/main.mk -j$CPU_COUNT_MULTIPLIER DEBUG=$DEBUG"
+FLAGS="-s -f make/main.mk -j$PROCESSOR_COUNT DEBUG=$DEBUG"
+
 UTILITY="utility $FLAGS"
 PREPARE="prepare $FLAGS"
 BUILD="build $FLAGS"
