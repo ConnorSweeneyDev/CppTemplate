@@ -8,8 +8,8 @@ UTILITY="utility $FLAGS"
 PREPARE="prepare $FLAGS"
 BUILD="build $FLAGS"
 
-if [[ "$OS" == "Windows_NT" ]]; then
+if [ "$OS" == "Windows_NT" ]; then
   make $UTILITY && make $PREPARE && make $BUILD
-elif [[ "$(uname)" == "Linux" ]]; then
+elif [ "$(uname)" == "Linux" ]; then
   make $PREPARE && make $BUILD
 fi
