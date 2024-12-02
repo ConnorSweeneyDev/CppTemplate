@@ -10,6 +10,6 @@ BUILD="build $FLAGS"
 
 if [[ "$OS" == "Windows_NT" ]]; then
   make $UTILITY && make $PREPARE && make $BUILD
-else
+elif [[ "$(uname)" == "Linux" ]]; then
   make $PREPARE && make $BUILD
 fi

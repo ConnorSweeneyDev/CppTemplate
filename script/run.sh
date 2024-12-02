@@ -2,6 +2,6 @@
 
 if [[ "$OS" == "Windows_NT" ]]; then
   ./binary/windows/CppTemplate.exe
-else
+elif [[ "$(uname)" == "Linux" ]]; then
   ./binary/linux/CppTemplate.out
 fi

@@ -6,6 +6,6 @@ CLEAN="clean $FLAGS"
 
 if [[ "$OS" == "Windows_NT" ]]; then
   make $CLEAN
-else
+elif [[ "$(uname)" == "Linux" ]]; then
   make $CLEAN
 fi
