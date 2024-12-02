@@ -3,4 +3,5 @@
 FLAGS="-f make/main.mk"
 CLEAN="clean $FLAGS"
 
-make $CLEAN
+COMMAND="make $CLEAN"
+pwsh -Command $COMMAND

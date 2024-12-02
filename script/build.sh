@@ -1,9 +1,20 @@
 #!/bin/bash
 
+CWD=$(pwd)
 CPU_COUNT_MULTIPLIER=$(nproc)
-FLAGS="-s -f make/main.mk -j$CPU_COUNT_MULTIPLIER DEBUG=1"
+DEBUG=1
+FLAGS="-s -f make/main.mk -j$CPU_COUNT_MULTIPLIER DEBUG=$DEBUG"
 UTILITY="utility $FLAGS"
 PREPARE="prepare $FLAGS"
 BUILD="build $FLAGS"
 
-make $PREPARE && make $BUILD
+if [[ "$OSTYPE" == "linux-gnu"* ]]; then
+  COMMAND="make $PREPARE && make $BUILD"
+elif [[ "$OSTYPE" == "msys" ]]; then
+  COMMAND="make $UTILITY && make $PREPARE && make $BUILD"
+fi
+if [ "$1" == "-wezterm" ]; then
+  wezterm cli spawn --cwd $CWD pwsh -NoExit -Command $COMMAND
+else
+  pwsh -Command $COMMAND
+fi

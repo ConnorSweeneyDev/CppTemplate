@@ -7,9 +7,8 @@ Version information for dependencies can be found in `external/version_info.txt`
 
 By default, the executables are statically linked, although requirements for linking vary by project.
 
-After following the platform specific instructions below you can execute the `build.bat` file on Windows or the
-`build.sh` file on Linux from the root of the project to build the binary. The outputted binary must be run from the
-root to work as intended.
+After following the platform specific instructions below you can execute `script/build.sh` followed by `script/run.sh`
+from the root of the project to build and run the project.
 
 ### Windows
 Do the following to ensure your environment is set up correctly:
