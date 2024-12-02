@@ -1,7 +1,7 @@
 #!/bin/bash
 
-if [[ "$OSTYPE" == "linux-gnu"* ]]; then
-  gdb -tui ./binary/linux/CppTemplate.out
-elif [[ "$OSTYPE" == "msys" ]]; then
+if [[ "$OS" == "Windows_NT" ]]; then
   gdb -tui ./binary/windows/CppTemplate.exe
+else
+  gdb -tui ./binary/linux/CppTemplate.out
 fi

@@ -4,8 +4,8 @@ FLAGS="-s -f make/main.mk"
 
 CLEAN="clean $FLAGS"
 
-if [[ "$OSTYPE" == "linux-gnu"* ]]; then
+if [[ "$OS" == "Windows_NT" ]]; then
   make $CLEAN
-elif [[ "$OSTYPE" == "msys" ]]; then
+else
   make $CLEAN
 fi

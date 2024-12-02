@@ -8,8 +8,8 @@ UTILITY="utility $FLAGS"
 PREPARE="prepare $FLAGS"
 BUILD="build $FLAGS"
 
-if [[ "$OSTYPE" == "linux-gnu"* ]]; then
-  make $PREPARE && make $BUILD
-elif [[ "$OSTYPE" == "msys" ]] || [[ "$OSTYPE" == "cygwin" ]]; then
+if [[ "$OS" == "Windows_NT" ]]; then
   make $UTILITY && make $PREPARE && make $BUILD
+else
+  make $PREPARE && make $BUILD
 fi
