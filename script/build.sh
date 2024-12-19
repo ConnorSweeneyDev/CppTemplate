@@ -9,9 +9,9 @@ PREPARE="prepare $FLAGS"
 BUILD="build $FLAGS"
 
 if [ "$OS" == "Windows_NT" ]; then
-  make $UTILITY && make $PREPARE && make $BUILD
+  mingw32-make $UTILITY && mingw32-make $PREPARE && mingw32-make $BUILD
 elif [ "$(uname)" == "Linux" ]; then
-  make $PREPARE && make $BUILD
+  mingw32-make $PREPARE && mingw32-make $BUILD
 else
   echo "Unsupported OS"
 fi
